@@ -65,8 +65,3 @@ API REST desenvolvida com **Spring Boot** para gerenciar produtos, permitindo op
 
 ✨ Autor
 Desenvolvido por Felipe Saraiva
-
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/FelipeSaraiva71/springboot-crud-produtos.git
