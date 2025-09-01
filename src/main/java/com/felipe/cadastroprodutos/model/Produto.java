@@ -57,4 +57,6 @@ public class Produto {
     public void setPeso(){
         this.peso = peso;
     }
+
+
 }
