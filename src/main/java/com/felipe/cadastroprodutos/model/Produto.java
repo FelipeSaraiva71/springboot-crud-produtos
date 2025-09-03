@@ -1,4 +1,5 @@
 package com.felipe.cadastroprodutos.model;
+import com.felipe.cadastroprodutos.Util.Utils;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 
@@ -14,7 +15,16 @@ public class Produto {
     private BigDecimal valor;
     private double peso;
 
-    public Produto (){
+    public Produto() {
+
+    }
+
+    public Produto ( String nomeProduto, String descricao, BigDecimal valor, double peso){
+
+        this.nomeProduto = Utils.validaTextoNumero(nomeProduto);
+        this.descricao = Utils.validaTextoNumero(descricao);
+        this.valor = valor;
+        this.peso = peso;
 
     }
 
@@ -23,30 +33,30 @@ public class Produto {
     }
 
     public void setId(Long id){
-        this.id = this.id;
+        this.id = id;
     }
 
     public String getNomeProduto(){
         return nomeProduto;
     }
 
-    public void setNomeProduto(){
-        this.nomeProduto = nomeProduto;
+    public void setNomeProduto(String nomeProduto){
+        this.nomeProduto = Utils.validaTextoNumero(nomeProduto);
     }
 
     public String getDescricao(){
         return descricao;
     }
 
-    public void setDescricao(){
-        this.descricao = descricao;
+    public void setDescricao(String descricao){
+        this.descricao = Utils.validaTextoNumero(descricao);
     }
 
     public BigDecimal getValor(){
         return valor;
     }
 
-    public void setValor(){
+    public void setValor(BigDecimal valor){
         this.valor = valor;
     }
 
@@ -54,7 +64,7 @@ public class Produto {
         return peso;
     }
 
-    public void setPeso(){
+    public void setPeso(double peso){
         this.peso = peso;
     }
 
