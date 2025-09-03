@@ -23,8 +23,8 @@ public class Produto {
 
         this.nomeProduto = Utils.validaTextoNumero(nomeProduto);
         this.descricao = Utils.validaTextoNumero(descricao);
-        this.valor = valor;
-        this.peso = peso;
+        this.valor = Utils.validaValor(valor);
+        this.peso = Utils.validaPeso(peso);
 
     }
 
@@ -57,7 +57,7 @@ public class Produto {
     }
 
     public void setValor(BigDecimal valor){
-        this.valor = valor;
+        this.valor = Utils.validaValor(valor);
     }
 
     public double getPeso(){
@@ -65,7 +65,7 @@ public class Produto {
     }
 
     public void setPeso(double peso){
-        this.peso = peso;
+        this.peso = Utils.validaPeso(peso);
     }
 
 
